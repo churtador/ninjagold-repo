@@ -1,0 +1,73 @@
+* {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    /* outline: 1px red solid; */
+    padding: 0px;
+    margin: 0px;
+}
+
+#container {
+    padding: 10px;
+}
+
+h1 {
+    text-align: center;
+    padding: 25px;
+}
+
+#reset {
+    text-decoration: none;
+    color: teal;
+    font-size: 12pt;
+    text-align: center;
+    display: block;
+    outline: 2px grey dotted;
+    padding: 3px;
+}
+
+#goldCheck {
+    padding: 20px 20px 20px 0px;
+}
+
+#gold-indicator {
+    font-size: 10pt;
+    padding: 15px 15px 15px 0px;
+}
+
+#main {
+    text-align: center;
+}
+
+.forms {
+    outline: 2px black solid;
+    width: 200px;
+    height: 150px;
+    display: inline-flex;
+    flex-direction: row;
+    justify-content: space-around;
+    padding: 20px;
+    margin: 20px;
+    text-align: center;
+    vertical-align: top;
+}
+
+.forms h3,
+.forms p {
+    display: block;
+    padding: 10px;
+}
+
+.forms p {
+    font-size: 10pt;
+}
+
+.btn {
+    margin: 20px;
+}
+
+#activities {
+    width: 90%;
+    height: 100px;
+    margin-left: auto;
+    margin-left: auto;
+    overflow-y: scroll;
+}

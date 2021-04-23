@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ninja Gold</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+
+<body>
+    <div id="container">
+        <h1>NinjaGold</h1>
+        <a id="reset" href="/reset">New Game</a>
+
+        <p id="gold-indicator">Your Gold: <input type="text" disabled="disabled" value={{ gold }}></p>
+
+        <div id="main">
+            <ul>
+                <li class="forms">
+                    <form action="/process_money" method="POST">
+                        {% csrf_token %}
+                        <h3>Farm</h3>
+                        <p>(earns 10 - 20 golds)</p>
+
+                        <input type="hidden" name="quest" value="farm">
+                        <p class="btn"><button type="submit">Find Gold!</button></p>
+                    </form>
+                </li>
+                <li class="forms">
+                    <form action="/process_money" method="POST">
+                        {% csrf_token %}
+                        <h3>Cave</h3>
+                        <p>(earns 5 - 10 golds)</p>
+
+                        <input type="hidden" name="quest" value="cave">
+                        <p class="btn"><button type="submit">Find Gold!</button></p>
+                    </form>
+                </li>
+                <li class="forms">
+                    <form action="/process_money" method="POST">
+                        {% csrf_token %}
+                        <h3>House</h3>
+                        <p>(earns 2 - 5 golds)</p>
+                        <input type="hidden" name="quest" value="house">
+                        <p class="btn"><button type="submit">Find Gold!</button></p>
+                    </form>
+                </li>
+                <li class="forms">
+                    <form action="/process_money" method="POST">
+                        {% csrf_token %}
+                        <h3>Casino</h3>
+                        <p>(earns/takes 0 - 50 golds)</p>
+
+                        <input type="hidden" name="quest" value="casino">
+                        <p class="btn"><button type="submit">Find Gold!</button></p>
+                    </form>
+                </li>
+            </ul>
+
+
+        </div>
+        <p>Actividades:</p>
+        <textarea name="" id="activities" cols="30" rows="10">{{act}}</textarea>
+    </div>
+</body>
+
+</html>
